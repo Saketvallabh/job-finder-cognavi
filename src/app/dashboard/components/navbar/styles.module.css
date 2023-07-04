@@ -1,0 +1,58 @@
+.navContainer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    height: 65px;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logoImage{
+    height: 20px;
+    width: 24px;
+}
+
+.styText {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.listContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 15%;
+}
+
+.contentText {
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.avatarContainer{
+    display: flex;
+    flex-direction: row;
+    width: 12%;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #c5e4ea;
+    border-radius: 20px;
+    right: 60px;
+    position: absolute;
+}
