@@ -1,5 +1,6 @@
 .jobsContainer {
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 30px 25px 5px 20px;
 }
@@ -44,4 +45,177 @@
 .sortContainer {
     display: flex;
     width: 40%;
+}
+
+.jobCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jobsRow {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+    margin-bottom: 10px;
+}
+
+.jobCard {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 6px 6px 6px 6px;
+    align-items: center;
+    background: #f3f3f3;
+    min-height: 330px;
+}
+
+.jobDetailContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    height: 80%;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.jobDate {
+    display: flex;
+    width: 45%;
+    background: #f3f3f3;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.companyDetails {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.companyName {
+    display: flex;
+    font-size: 14px;
+}
+
+.positionDetail {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roleDesc {
+    display: flex;
+    width: 60%;
+    font-size: 24px;
+}
+
+.jobFilters {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.filterContRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.filterCont {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.payContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* margin-top: 20px; */
+    align-items: center;
+    min-height: 60px;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 25%;
+    border-radius: 20px;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    min-height: 32px;
+    cursor: pointer;
+}
+
+.buttontext {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.paytextStyle {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+}
+
+.pay {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.jobLoc {
+    font-size: 12px;
+}
+
+.companyLogo {
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.saveImagecon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    background: #f3f3f3;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.imageSty {
+    height: 32px;
+    width: 32px;
+}
+
+.savedImgSty {
+    height: 24px;
+    width: 24px;
 }

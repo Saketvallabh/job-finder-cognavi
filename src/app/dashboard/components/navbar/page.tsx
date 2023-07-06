@@ -9,6 +9,7 @@ import { useState } from 'react';
 export default function Navbar () {
     const router = useRouter()
     const [showProfile, setShowProfile] = useState(false)
+    const [tab, setTab] = useState("")
 
     const Profile = [
         {
@@ -33,18 +34,22 @@ export default function Navbar () {
 
     const handleDashboardClick = () => {
         router.push("/dashboard")
+        setTab("dashboard")
     }
 
     const handleNetworkClick = () => {
         router.push("/MyNetworks")
+        setTab("MyNetworks")
     }
 
     const handlePremiumClick = () => {
         router.push("/GetPremium")
+        setTab("GetPremium")
     }
 
     const handleAboutClick = () => {
         router.push("/AboutUs")
+        setTab("AboutUs")
     }
 
     const handleProfileClick = () => {
@@ -60,28 +65,28 @@ export default function Navbar () {
                         <span className={styles.styText}>Job Finder</span>
                     </div>
                     <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleDashboardClick}>
+                        <div className={styles.contentText} onClick={handleDashboardClick} style={{color: tab === "dashboard" ? '#d4f6ed' : '#ffffff'}}>
                             <p>Dashboard</p>
                         </div>
                     </div>
                     <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleNetworkClick}>
+                        <div className={styles.contentText} onClick={handleNetworkClick} style={{color: tab === "MyNetworks" ? '#d4f6ed' : '#ffffff'}}>
                             <p>My Networks</p>
                         </div>
                     </div>
                     <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handlePremiumClick}>
+                        <div className={styles.contentText} onClick={handlePremiumClick} style={{color: tab === "GetPremium" ? '#d4f6ed' : '#ffffff'}}>
                             <p>Get Premium</p>
                         </div>
                     </div>
                     <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleAboutClick}>
+                        <div className={styles.contentText} onClick={handleAboutClick} style={{color: tab === "AboutUs" ? '#d4f6ed' : '#ffffff'}}>
                             <p>About Us</p>
                         </div>
                     </div>
                     <div className={styles.avatarContainer} onClick={handleProfileClick}>
                         <div className={styles.logoImage}><Image src={avatar_w} alt={"logo"}/></div>
-                        <span className={styles.styText}>My Profile</span>
+                        <span className={styles.styText}>Saket</span>
                         {showProfile && 
                             <div className={styles.dropDown}>
                                 {Profile.map((Item) => 

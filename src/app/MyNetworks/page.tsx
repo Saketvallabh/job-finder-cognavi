@@ -3,6 +3,7 @@ import Navbar from '../dashboard/components/navbar/page';
 import avatar from 'public/avatar_one.png'
 import avatar_w from 'public/avatarr.png'
 import styles from './styles.module.css';
+import { useState } from 'react';
 
 export default function MyNetworks () {
     return (
@@ -11,7 +12,7 @@ export default function MyNetworks () {
             <div className={styles.networkContainer}>
                 <div className={styles.myNetworkContainer}>
                     <div className={styles.requestContainer}>
-                        <div className={styles.headerPlan}>
+                        <div className={styles.headerPlan} style={{background: "rgb(147, 212, 216)"}}>
                             <div className={styles.planName}>
                                 <div className={styles.cardContainer}>
                                     <div className={styles.avatarImage}><Image src={avatar} alt={"avatar"}/></div>
@@ -24,13 +25,13 @@ export default function MyNetworks () {
                                     <div className={styles.responseButton}>
                                         <span>Accept</span>
                                     </div>
-                                    <div className={styles.responseButton} style={{background: "#000000"}}>
+                                    <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.headerPlan}>
+                        <div className={styles.headerPlan} style={{background: "rgb(147, 212, 216)"}}>
                             <div className={styles.planName}>
                                 <div className={styles.cardContainer}>
                                     <div className={styles.avatarImage}><Image src={avatar} alt={"avatar"}/></div>
@@ -43,13 +44,13 @@ export default function MyNetworks () {
                                     <div className={styles.responseButton}>
                                         <span>Accept</span>
                                     </div>
-                                    <div className={styles.responseButton} style={{background: "#000000"}}>
+                                    <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.headerPlan}>
+                        <div className={styles.headerPlan} style={{background: "rgb(147, 212, 216)"}}>
                             <div className={styles.planName}>
                                 <div className={styles.cardContainer}>
                                     <div className={styles.avatarImage}><Image src={avatar} alt={"avatar"}/></div>
@@ -62,7 +63,7 @@ export default function MyNetworks () {
                                     <div className={styles.responseButton}>
                                         <span>Accept</span>
                                     </div>
-                                    <div className={styles.responseButton} style={{background: "#000000"}}>
+                                    <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
                                     </div>
                                 </div>
@@ -112,9 +113,6 @@ export default function MyNetworks () {
                             </div>
                         </div>
                     </div>
-                    {/* <div className={styles.connectContainer}>
-                        
-                    </div> */}
                 </div>
             </div>
         </>
