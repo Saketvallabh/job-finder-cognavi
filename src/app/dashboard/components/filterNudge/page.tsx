@@ -1,12 +1,24 @@
-import Image from 'next/image'
+'use client';
+
+import Image from 'next/image';
 import search from 'public/search.png';
 import location from 'public/location.png';
 import experience from 'public/experience.png';
 import clock from 'public/clock.png';
 import caret_down from 'public/caret_downn.png';
 import styles from './styles.module.css'
+import { useState } from 'react';
 
 export default function Filters () {
+
+    const [showExp, setExpDrop] = useState(false) 
+    const [showRole, setRoleDrop] = useState(false)
+    const [showType, setTypeDrop] = useState(false)
+    const [showLocation, setLocationDrop] = useState(false)
+    const [exp, setExp] = useState("Experience")
+    const [role, setRole] = useState("Role")
+    const [type, setType] = useState("Type")
+
     const FilterList = [
         {
             description: "Role",
@@ -29,11 +41,82 @@ export default function Filters () {
             alt: "clock"
         }
     ]
+
+    const workExp = [
+        {
+            year: "0-1 years"
+        },
+        {
+            year: "1-3 years"
+        },
+        {
+            year: "3-5 years"
+        },
+        {
+            year: "5-10 years"
+        },
+        {
+            year: "reset"
+        }
+    ]
+
+    const Role = [
+        {
+            roleName: "Software Developer"
+        },
+        {
+            roleName: "Analyst"
+        },
+        {
+            roleName: "principal Engineer"
+        },
+        {
+            roleName: "Product Manager"
+        },
+        {
+            roleName: "Data Scientist"
+        },
+        {
+            roleName: "reset"
+        }
+    ]
+
+    const Type = [
+        {
+            T: "Full Time"
+        },
+        {
+            T: "Part Time"
+        },
+        {
+            T: "Intern"
+        },
+        {
+            T: "Contract"
+        },
+        {
+            T: "reset"
+        }
+    ]
+
+    const handleExpDropClick = () => {
+        setExpDrop(!showExp)
+    }
+    const handleRoleDropClick = () => {
+        setRoleDrop(!showRole)
+    }
+    const handleTypeDropClick = () => {
+        setTypeDrop(!showType)
+    }
+    const handleLocationDropClick = () => {
+        setExpDrop(!showExp)
+    }
+
     return (
         <>
             <div className={styles.filterContainer}>
                 <div className={styles.filterListContainer}>
-                    {
+                    {/* {
                         FilterList.map((planItem) => {
                             return (
                                 <>
@@ -52,7 +135,91 @@ export default function Filters () {
                                 </>
                             )
                         })
-                    }
+                    } */}
+                    <div className={styles.filterListContent}>
+                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.optionContainer} onClick={handleRoleDropClick}>
+                            <div className={styles.contentText}>
+                                <p>{role}</p>
+                                {showRole && 
+                                    <div className={styles.dropDown}>
+                                        {Role.map((Item) => 
+                                            <>
+                                            <span onClick={() => Item.roleName === "reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
+                                            <hr className={styles.horizontalLine}/>
+                                            </>
+                                        )}
+                                    </div>
+                                }
+                            </div>
+                            <div className={styles.caretDown}>
+                                <Image src={caret_down} alt={"caret"}/>
+                            </div>
+                        </div>
+                        <div className={styles.verticalLine}></div>
+                    </div>
+                    <div className={styles.filterListContent}>
+                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.optionContainer}>
+                            <div className={styles.contentText}>
+                                <p>Work Location</p>
+                                {/* {cities.map((Item) => 
+                                    <>
+                                    <span onClick={() => Item.roleName === "reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
+                                    <hr className={styles.horizontalLine}/>
+                                    </>
+                                )} */}
+                            </div>
+                            <div className={styles.caretDown}>
+                                <Image src={caret_down} alt={"caret"}/>
+                            </div>
+                        </div>
+                        <div className={styles.verticalLine}></div>
+                    </div>
+                    <div className={styles.filterListContent}>
+                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.optionContainer} onClick={handleExpDropClick}>
+                            <div className={styles.contentText}>
+                                <p>{exp}</p>
+                                {showExp && 
+                                    <div className={styles.dropDown}>
+                                        {workExp.map((Item) => 
+                                            <>
+                                            <span onClick={() => Item.year === "reset" ? setExp("experience") : setExp(Item.year)}>{Item.year}</span>
+                                            <hr className={styles.horizontalLine}/>
+                                            </>
+                                        )}
+                                    </div>
+                                }
+                            </div>
+                            <div className={styles.caretDown}>
+                                <Image src={caret_down} alt={"caret"}/>
+                            </div>
+                        </div>
+                        <div className={styles.verticalLine}></div>
+                    </div>
+                    <div className={styles.filterListContent}>
+                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.optionContainer} onClick={handleTypeDropClick}>
+                            <div className={styles.contentText}>
+                                <p>{type}</p>
+                                {showType && 
+                                    <div className={styles.dropDown}>
+                                        {Type.map((Item) => 
+                                           <>
+                                            <span onClick={() => Item.T === "reset" ? setType("Type") : setType(Item.T)}>{Item.T}</span>
+                                            <hr className={styles.horizontalLine}/>
+                                           </>
+                                        )}
+                                    </div>
+                                }
+                            </div>
+                            <div className={styles.caretDown}>
+                                <Image src={caret_down} alt={"caret"}/>
+                            </div>
+                        </div>
+                        <div className={styles.verticalLine}></div>
+                    </div>
                 </div>
             </div>
         </>

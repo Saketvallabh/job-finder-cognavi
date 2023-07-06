@@ -1,0 +1,82 @@
+.pricingContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.pricingBody {
+    /* background: linear-gradient(rgba(4, 10, 17, 0.2) 0%, rgba(0, 97, 242, 0.1) 100%); */
+    background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%);
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+    height: 70%;
+    width: 100%;
+}
+
+.heading {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.headingText {
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+}
+
+.benefitsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100px;
+}
+
+.benefitText {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.benefitRowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.benefitsRow {
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.benefitBox {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    min-height: 80px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px 10px 20px 10px;
+    gap: 10px;
+}
+
+.benefitImage {
+    width: 20px;
+    height: 20px;
+}
+
+.faqContainer {
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 4rem;
+    justify-content: center;
+}

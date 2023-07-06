@@ -1,0 +1,42 @@
+.QnAContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    padding: 20px 30px 20px 30px;
+    background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%);
+    min-height: 200px;
+}
+
+.faqHeadingContainer {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faqHeading {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.questionAnsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.answer {
+    font-size: 16px;
+    font-weight: 400;
+    color: #626161;
+}

@@ -1,0 +1,76 @@
+.planCardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.planCards {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.cardOne {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 20px;
+    min-height: 100px;
+    /* background:  linear-gradient(rgba(4, 10, 17, 0.2) 0%, rgba(0, 97, 242, 0.1) 100%); */
+    background-color: #ffffff;
+    padding: 20px 10px 20px 10px;
+}
+
+.cardHeading {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.cardHeadingTwo {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.plan {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.planTwo {
+    font-weight: 600;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.planMsg {
+    color: #ffffff;
+}
+
+.buyBtn {
+    display: flex;
+    width: 100%;
+    border: 2px solid rgb(2, 2, 2);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    /* background:  linear-gradient(to top, #2564e3 0%, #2638bf 100%); */
+    background-color: #ffffff;
+}
+
+.cardTwo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 20px;
+    min-height: 100px;
+    padding: 20px 10px 20px 10px;
+    /* background:  linear-gradient(to top, #257bea 0%, #de8bb8 100%); */
+    background-color: black;
+}

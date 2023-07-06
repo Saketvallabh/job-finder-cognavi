@@ -1,0 +1,209 @@
+.paymentContainer {
+    /* display: flex;
+    width: 100%;
+    height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.payDetailContainer {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.payDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 40px 10px 40px;
+    height: 35%;
+    background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.headerPlan {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.subsImage {
+    height: 60px;
+    width: 60px;
+}
+
+.planName {
+    display: flex;
+    width: 100%;
+    padding: 0 0 0 30px;
+    justify-content: space-between;
+}
+
+.planText {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.couponContainer {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-top: 30px;
+    min-height: 25px;
+    align-items: center;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+}
+
+.couponImage {
+    height: 20px;
+    width: 20px;
+}
+
+.discountMsg {
+    display: flex;
+    width: 100%;
+    padding: 0 5px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discountText {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.toPayContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancelContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cancelStar {
+    font-size: 12px;
+    font-weight: 400;
+    color: chocolate;
+}
+
+.cancelMsg {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 40px 20px 40px;
+    height: 55%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 12px 40px 12px 40px;
+    height: 10%;
+    background: #000000;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.amountContainer {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.payableText {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    align-items: center;
+}
+
+.payButton {
+    display: flex;
+    width: 30%;
+    background: #ffffff;
+    height: 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.payText {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.cardNoContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cardDetailContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.cardInput {
+    display: flex;
+    background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%);
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    align-items: center;
+}
+
+.cvvContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: space-between;
+}

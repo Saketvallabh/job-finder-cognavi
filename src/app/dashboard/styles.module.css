@@ -7,11 +7,9 @@
 .sidebar {
     display: flex;
     width: 20%;
-    height: 100vh;
 }
 
 .body {
     display: flex;
     width: 80%;
-    height: 100vh;
 }
