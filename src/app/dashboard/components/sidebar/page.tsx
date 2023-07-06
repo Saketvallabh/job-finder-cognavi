@@ -93,6 +93,49 @@ export default function SideBar () {
     //     console.log(response, "api response");
     // });
 
+    const url = 'https://job-opening-analyzer.p.rapidapi.com/jobs?keyword=Marketing&location=California&skip=0&limit=10';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
+            'X-RapidAPI-Host': 'job-opening-analyzer.p.rapidapi.com'
+        }
+    };
+
+    const jobApi = async () => {
+        try {
+            const response = await fetch(url, options);
+            const result = await response.text();
+            console.log(result);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const url1 = 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries/US/places';
+    const options1 = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
+            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+        }
+    };
+
+    const placeApi = async () => {
+        try {
+            const response = await fetch(url1, options1);
+            const result = await response.text();
+            console.log(result);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    useEffect(() => {
+        jobApi();
+        placeApi();
+    }, [])
+
     return (
         <>
             <div className={styles.sidebarContainer}>
