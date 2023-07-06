@@ -28,6 +28,7 @@ export default function Dashboard () {
 
     return (
         <>
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
             <Navbar/>
             <Filters 
                 job_City={jobCities}
