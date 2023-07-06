@@ -130,8 +130,12 @@ export default function Filters (props: jobCityProps) {
                                     <div className={styles.dropDown}>
                                         {props?.job_City?.map((Item) => 
                                             <>
-                                            <span onClick={() => Item && setJobCity(Item.city)}>{Item && Item.city}</span>
-                                            <hr className={styles.horizontalLine}/>
+                                            {Item.city &&
+                                                <>
+                                                <span onClick={() => setJobCity(Item.city)}>{Item.city}</span>
+                                                <hr className={styles.horizontalLine}/>
+                                                </>
+                                            }
                                             </>
                                         )}
                                     </div> 
