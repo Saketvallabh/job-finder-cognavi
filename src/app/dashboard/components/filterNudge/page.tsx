@@ -9,13 +9,13 @@ import caret_down from 'public/caret_downn.png';
 import styles from './styles.module.css'
 import { useState } from 'react';
 
-type job_CityProps = {
+type jobCityProps = {
     job_City : {
         city: string
     }[]
 }
 
-export default function Filters (props: job_CityProps) {
+export default function Filters (props: jobCityProps) {
     const [showExp, setExpDrop] = useState(false) 
     const [showRole, setRoleDrop] = useState(false)
     const [showType, setTypeDrop] = useState(false)

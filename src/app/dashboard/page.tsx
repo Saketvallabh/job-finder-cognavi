@@ -23,7 +23,7 @@ export default function Dashboard () {
     
     $.ajax(cities).done(function (response) {
         setCities(response?.data)
-        console.log(response, "hiiiii");
+        console.log(response, "city response");
     });
 
     return (
