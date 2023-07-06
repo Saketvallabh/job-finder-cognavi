@@ -57,7 +57,7 @@ export default function Filters () {
             year: "5-10 years"
         },
         {
-            year: "reset"
+            year: "Reset"
         }
     ]
 
@@ -78,7 +78,7 @@ export default function Filters () {
             roleName: "Data Scientist"
         },
         {
-            roleName: "reset"
+            roleName: "Reset"
         }
     ]
 
@@ -96,7 +96,7 @@ export default function Filters () {
             T: "Contract"
         },
         {
-            T: "reset"
+            T: "Reset"
         }
     ]
 
@@ -148,7 +148,7 @@ export default function Filters () {
                                     <div className={styles.dropDown}>
                                         {Role.map((Item) => 
                                             <>
-                                            <span onClick={() => Item.roleName === "reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
+                                            <span onClick={() => Item.roleName === "Reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
                                             <hr className={styles.horizontalLine}/>
                                             </>
                                         )}
@@ -162,7 +162,7 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.filterImage}><Image src={location} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleLocationDropClick}>
                             <div className={styles.contentText}>
                                 <p>{jobCity}</p>
@@ -184,7 +184,7 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.filterImage}><Image src={experience} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleExpDropClick}>
                             <div className={styles.contentText}>
                                 <p>{exp}</p>
@@ -192,7 +192,7 @@ export default function Filters () {
                                     <div className={styles.dropDown}>
                                         {workExp.map((Item) => 
                                             <>
-                                            <span onClick={() => Item.year === "reset" ? setExp("experience") : setExp(Item.year)}>{Item.year}</span>
+                                            <span onClick={() => Item.year === "Reset" ? setExp("Experience") : setExp(Item.year)}>{Item.year}</span>
                                             <hr className={styles.horizontalLine}/>
                                             </>
                                         )}
@@ -206,7 +206,7 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.filterImage}><Image src={clock} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleTypeDropClick}>
                             <div className={styles.contentText}>
                                 <p>{type}</p>
@@ -214,7 +214,7 @@ export default function Filters () {
                                     <div className={styles.dropDown}>
                                         {Type.map((Item) => 
                                            <>
-                                            <span onClick={() => Item.T === "reset" ? setType("Type") : setType(Item.T)}>{Item.T}</span>
+                                            <span onClick={() => Item.T === "Reset" ? setType("Type") : setType(Item.T)}>{Item.T}</span>
                                             <hr className={styles.horizontalLine}/>
                                            </>
                                         )}
