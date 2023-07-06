@@ -8,7 +8,8 @@ import bell from 'public/bell.png';
 import note from 'public/note.png';
 import note_resume from 'public/note_resume.png';
 import skill from 'public/skill.png';
-import setting from 'public/setting.png'
+import setting from 'public/setting.png';
+import saved from 'public/saved.png'
 import styles from './styles.module.css'
 import { useEffect } from 'react';
 
@@ -17,7 +18,7 @@ export default function SideBar () {
     const userOption = [
         {
             description: "My jobs",
-            Image: bell,
+            Image: saved,
             alt: "search"
         },
         {
