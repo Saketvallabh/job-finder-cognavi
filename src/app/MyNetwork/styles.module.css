@@ -1,0 +1,153 @@
+.networkContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.myNetworkContainer {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+}
+
+.requestContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 40px 10px 40px;
+    height: 40%;
+    background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 10px;
+}
+
+.headerPlan {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+}
+
+.planName {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planText {
+    font-size: 24px;
+    font-weight: 600;
+    height: 30px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.responseButton {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    min-width: 45%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #91bce0;
+}
+
+.personDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.personWork {
+    font-size: 14px;
+}
+
+.avatarImage {
+    width: 40px;
+    height: 40px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.showMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.connectContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 40px 20px 40px;
+    height: 60%;
+    gap: 20px;
+}
+
+.connectionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.connectRequest {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(21, 32, 43);
+    /* background: linear-gradient(rgb(71 118 171 / 20%) 0%, rgba(0, 97, 242, 0.1) 100%); */
+    align-items: center;
+    width: 45%;
+    padding: 20px 30px 20px 30px;
+    gap: 10px;
+}
+
+.avImage {
+    height: 40px;
+    width: 40px;
+}
+
+.nameOfothers {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.personJobDetails {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.connectButton {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
