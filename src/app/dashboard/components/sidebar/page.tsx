@@ -51,46 +51,46 @@ export default function SideBar () {
         router.push("/GetPremium")
     }
     
-    const searchJob = {
-        async: true,
-        url: 'https://serpapi.com/search.json?api_key=f0748a4fa911dac5b6a4c3d604752911dd69bd70b32f3a0a2cfb8d7506ed31e2&engine=google_jobs&q=barista+new+york&hl=en',
-        method: 'GET',
+    // const searchJob = {
+    //     async: true,
+    //     url: 'https://serpapi.com/search.json?api_key=f0748a4fa911dac5b6a4c3d604752911dd69bd70b32f3a0a2cfb8d7506ed31e2&engine=google_jobs&q=barista+new+york&hl=en',
+    //     method: 'GET',
         
-    };
+    // };
 
-    $.ajax(searchJob).done(function (response) {
-        console.log(response, "jobsearch");
-    });
+    // $.ajax(searchJob).done(function (response) {
+    //     console.log(response, "jobsearch");
+    // });
 
-    const location = {
-        async: true,
-        crossDomain: true,
-        url: 'https://city-and-state-search-api.p.rapidapi.com/cities/132782',
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
-            'X-RapidAPI-Host': 'city-and-state-search-api.p.rapidapi.com'
-        }
-    };
+    // const location = {
+    //     async: true,
+    //     crossDomain: true,
+    //     url: 'https://city-and-state-search-api.p.rapidapi.com/cities/132782',
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
+    //         'X-RapidAPI-Host': 'city-and-state-search-api.p.rapidapi.com'
+    //     }
+    // };
     
-    $.ajax(location).done(function (response) {
-        console.log(response, "location");
-    });
+    // $.ajax(location).done(function (response) {
+    //     console.log(response, "location");
+    // });
 
-    const settings = {
-        async: true,
-        crossDomain: true,
-        url: 'https://fresh-linkedin-profile-data.p.rapidapi.com/get-linkedin-profile?linkedin_url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwilliamhgates%2F',
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
-            'X-RapidAPI-Host': 'fresh-linkedin-profile-data.p.rapidapi.com'
-        }
-    };
+    // const settings = {
+    //     async: true,
+    //     crossDomain: true,
+    //     url: 'https://fresh-linkedin-profile-data.p.rapidapi.com/get-linkedin-profile?linkedin_url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwilliamhgates%2F',
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
+    //         'X-RapidAPI-Host': 'fresh-linkedin-profile-data.p.rapidapi.com'
+    //     }
+    // };
     
-    $.ajax(settings).done(function (response) {
-        console.log(response, "api response");
-    });
+    // $.ajax(settings).done(function (response) {
+    //     console.log(response, "api response");
+    // });
 
     return (
         <>
