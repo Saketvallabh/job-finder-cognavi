@@ -63,20 +63,20 @@ export default function SideBar () {
     //     console.log(response, "jobsearch");
     // });
 
-    // const location = {
-    //     async: true,
-    //     crossDomain: true,
-    //     url: 'https://city-and-state-search-api.p.rapidapi.com/cities/132782',
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
-    //         'X-RapidAPI-Host': 'city-and-state-search-api.p.rapidapi.com'
-    //     }
-    // };
+    const location = {
+        async: true,
+        crossDomain: true,
+        url: 'https://city-and-state-search-api.p.rapidapi.com/cities/132782',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'baac45ea12mshd1afe6f34339e0dp155ccejsn73e30e3f3207',
+            'X-RapidAPI-Host': 'city-and-state-search-api.p.rapidapi.com'
+        }
+    };
     
-    // $.ajax(location).done(function (response) {
-    //     console.log(response, "location");
-    // });
+    $.ajax(location).done(function (response) {
+        console.log(response, "location");
+    });
 
     // const settings = {
     //     async: true,

@@ -1,5 +1,5 @@
 'use client';
-
+import $ from "jquery";
 import Image from 'next/image';
 import search from 'public/search.png';
 import location from 'public/location.png';
@@ -9,38 +9,21 @@ import caret_down from 'public/caret_downn.png';
 import styles from './styles.module.css'
 import { useState } from 'react';
 
-export default function Filters () {
+type job_CityProps = {
+    job_City : {
+        city: string
+    }[]
+}
 
+export default function Filters (props: job_CityProps) {
     const [showExp, setExpDrop] = useState(false) 
     const [showRole, setRoleDrop] = useState(false)
     const [showType, setTypeDrop] = useState(false)
     const [showLocation, setLocationDrop] = useState(false)
+    const [jobCity, setJobCity] = useState("Work Location")
     const [exp, setExp] = useState("Experience")
     const [role, setRole] = useState("Role")
     const [type, setType] = useState("Type")
-
-    const FilterList = [
-        {
-            description: "Role",
-            Image: search,
-            alt: "search"
-        },
-        {
-            description: "Work Location",
-            Image: location,
-            alt: "location"
-        }, 
-        {
-            description: "Experience",
-            Image: experience,
-            alt: "exp"
-        },
-        {
-            description: "Type",
-            Image: clock,
-            alt: "clock"
-        }
-    ]
 
     const workExp = [
         {
@@ -56,7 +39,7 @@ export default function Filters () {
             year: "5-10 years"
         },
         {
-            year: "reset"
+            year: "Reset"
         }
     ]
 
@@ -77,7 +60,7 @@ export default function Filters () {
             roleName: "Data Scientist"
         },
         {
-            roleName: "reset"
+            roleName: "Reset"
         }
     ]
 
@@ -95,7 +78,7 @@ export default function Filters () {
             T: "Contract"
         },
         {
-            T: "reset"
+            T: "Reset"
         }
     ]
 
@@ -109,33 +92,13 @@ export default function Filters () {
         setTypeDrop(!showType)
     }
     const handleLocationDropClick = () => {
-        setExpDrop(!showExp)
+        setLocationDrop(!showLocation)
     }
 
     return (
         <>
             <div className={styles.filterContainer}>
                 <div className={styles.filterListContainer}>
-                    {/* {
-                        FilterList.map((planItem) => {
-                            return (
-                                <>
-                                    <div className={styles.filterListContent}>
-                                        <div className={styles.filterImage}><Image src={planItem.Image} alt={planItem.alt}/></div>
-                                        <div className={styles.optionContainer}>
-                                            <div className={styles.contentText}>
-                                                <p dangerouslySetInnerHTML={{ __html: planItem.description }} ></p>
-                                            </div>
-                                            <div className={styles.caretDown}>
-                                                <Image src={caret_down} alt={"caret"}/>
-                                            </div>
-                                        </div>
-                                        <div className={styles.verticalLine}></div>
-                                    </div>
-                                </>
-                            )
-                        })
-                    } */}
                     <div className={styles.filterListContent}>
                         <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleRoleDropClick}>
@@ -159,16 +122,20 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
-                        <div className={styles.optionContainer}>
+                        <div className={styles.filterImage}><Image src={location} alt={"search"}/></div>
+                        <div className={styles.optionContainer} onClick={handleLocationDropClick}>
                             <div className={styles.contentText}>
-                                <p>Work Location</p>
-                                {/* {cities.map((Item) => 
-                                    <>
-                                    <span onClick={() => Item.roleName === "reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
-                                    <hr className={styles.horizontalLine}/>
-                                    </>
-                                )} */}
+                                <p>{jobCity}</p>
+                                {showLocation &&
+                                    <div className={styles.dropDown}>
+                                        {props?.job_City?.map((Item) => 
+                                            <>
+                                            <span onClick={() => setJobCity(Item.city)}>{Item.city}</span>
+                                            <hr className={styles.horizontalLine}/>
+                                            </>
+                                        )}
+                                    </div> 
+                                }
                             </div>
                             <div className={styles.caretDown}>
                                 <Image src={caret_down} alt={"caret"}/>
@@ -177,7 +144,7 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.filterImage}><Image src={experience} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleExpDropClick}>
                             <div className={styles.contentText}>
                                 <p>{exp}</p>
@@ -185,7 +152,7 @@ export default function Filters () {
                                     <div className={styles.dropDown}>
                                         {workExp.map((Item) => 
                                             <>
-                                            <span onClick={() => Item.year === "reset" ? setExp("experience") : setExp(Item.year)}>{Item.year}</span>
+                                            <span onClick={() => Item.year === "reset" ? setExp("Experience") : setExp(Item.year)}>{Item.year}</span>
                                             <hr className={styles.horizontalLine}/>
                                             </>
                                         )}
@@ -199,7 +166,7 @@ export default function Filters () {
                         <div className={styles.verticalLine}></div>
                     </div>
                     <div className={styles.filterListContent}>
-                        <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
+                        <div className={styles.filterImage}><Image src={clock} alt={"search"}/></div>
                         <div className={styles.optionContainer} onClick={handleTypeDropClick}>
                             <div className={styles.contentText}>
                                 <p>{type}</p>
