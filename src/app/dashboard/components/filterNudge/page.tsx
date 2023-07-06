@@ -15,6 +15,7 @@ export default function Filters () {
     const [showRole, setRoleDrop] = useState(false)
     const [showType, setTypeDrop] = useState(false)
     const [showLocation, setLocationDrop] = useState(false)
+    const [jobCity, setJobCity] = useState("Work Location")
     const [exp, setExp] = useState("Experience")
     const [role, setRole] = useState("Role")
     const [type, setType] = useState("Type")
@@ -99,6 +100,8 @@ export default function Filters () {
         }
     ]
 
+    const Place = [{P: "Amanave"},{P: "Aoa"},{P: "Au'asi"},{P: "A and F Trailer Park"},{P: "A'oloau"}]
+
     const handleExpDropClick = () => {
         setExpDrop(!showExp)
     }
@@ -109,7 +112,7 @@ export default function Filters () {
         setTypeDrop(!showType)
     }
     const handleLocationDropClick = () => {
-        setExpDrop(!showExp)
+        setLocationDrop(!showLocation)
     }
 
     return (
@@ -160,15 +163,19 @@ export default function Filters () {
                     </div>
                     <div className={styles.filterListContent}>
                         <div className={styles.filterImage}><Image src={search} alt={"search"}/></div>
-                        <div className={styles.optionContainer}>
+                        <div className={styles.optionContainer} onClick={handleLocationDropClick}>
                             <div className={styles.contentText}>
-                                <p>Work Location</p>
-                                {/* {cities.map((Item) => 
-                                    <>
-                                    <span onClick={() => Item.roleName === "reset" ? setRole("Role") : setRole(Item.roleName)}>{Item.roleName}</span>
-                                    <hr className={styles.horizontalLine}/>
-                                    </>
-                                )} */}
+                                <p>{jobCity}</p>
+                                {showLocation &&
+                                    <div className={styles.dropDown}>
+                                        {Place.map((Item) => 
+                                            <>
+                                            <span onClick={() => setJobCity(Item.P)}>{Item.P}</span>
+                                            <hr className={styles.horizontalLine}/>
+                                            </>
+                                        )}
+                                    </div>
+                                }
                             </div>
                             <div className={styles.caretDown}>
                                 <Image src={caret_down} alt={"caret"}/>
