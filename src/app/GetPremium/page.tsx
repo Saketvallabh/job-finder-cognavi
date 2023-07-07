@@ -63,7 +63,7 @@ export default function getPremium () {
                                                     <div className={styles.benefitImage}>
                                                         <Image src={item.image} alt={item.alt} />
                                                     </div>
-                                                    <span>{item.perks}</span>
+                                                    <span style={{color: "black"}}>{item.perks}</span>
                                                 </div>
                                             </>
                                         )
@@ -83,7 +83,7 @@ export default function getPremium () {
                                                      <div className={styles.benefitImage}>
                                                         <Image src={item.image} alt={item.alt} />
                                                     </div>
-                                                    <span>{item.perks}</span>
+                                                    <span style={{color: "black"}}>{item.perks}</span>
                                                 </div>
                                             </>
                                         )

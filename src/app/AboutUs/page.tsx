@@ -9,7 +9,7 @@ export default function AboutUs () {
                 <div className={styles.aboutContainer}>
                     <div className={styles.center}>Who are we?</div>
                     <div className={styles.ansTextContainer}>
-                        <span>
+                        <span style={{color: "black"}}>
                             We are a leading job finding site dedicated to connecting job seekers with their ideal employment opportunities. 
                             With a strong focus on simplicity, efficiency, and user satisfaction, our platform serves as a comprehensive hub for individuals looking to explore and secure meaningful employment. 
                             Our team consists of experienced professionals passionate about bridging the gap between job seekers and employers, providing a seamless experience throughout the job search process.
@@ -21,7 +21,7 @@ export default function AboutUs () {
                 </div>
                 <div className={styles.aboutContainer}>
                     <div className={styles.ansTextContainer}>
-                        <span>
+                        <span style={{color: "black"}}>
                             At our job finding site, we strive to simplify and streamline the job search experience for both candidates and employers. 
                             We offer a wide range of features and services designed to empower job seekers in their quest for the perfect job and assist employers in finding the right talent for their organizations. 
                             Our platform hosts an extensive database of job listings across various industries, allowing users to search and filter through opportunities that match their skills, qualifications, and preferences. 

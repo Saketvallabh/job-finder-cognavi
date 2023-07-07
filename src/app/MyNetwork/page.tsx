@@ -3,7 +3,6 @@ import Navbar from '../dashboard/components/navbar/page';
 import avatar from 'public/avatar_one.png'
 import avatar_w from 'public/avatarr.png'
 import styles from './styles.module.css';
-import { useState } from 'react';
 
 export default function MyNetworks () {
     return (
