@@ -1,3 +1,9 @@
+.payTopCont {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+}
+
 .paymentContainer {
     /* display: flex;
     width: 100%;
@@ -52,6 +58,7 @@
 .planText {
     font-size: 24px;
     font-weight: 600;
+    color: black;
 }
 
 .couponContainer {
@@ -82,6 +89,7 @@
 .discountText {
     font-size: 16px;
     font-weight: 400;
+    color: black;
 }
 
 .toPayContainer {
@@ -110,6 +118,7 @@
 .cancelMsg {
     font-size: 12px;
     font-weight: 400;
+    color: black;
 }
 
 .userDetails {

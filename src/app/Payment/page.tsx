@@ -7,6 +7,7 @@ import styles from './styles.module.css';
 export default function Payment () {
     return (
         <>
+            <div className={styles.payTopCont}>
             <div className={styles.paymentContainer}>
                 <div className={styles.payDetailContainer}>
                     <div className={styles.payDetails}>
@@ -29,8 +30,8 @@ export default function Payment () {
                             </div>
                         </div>
                         <div className={styles.toPayContainer}>
-                            <span>To Pay</span>
-                            <span>$750</span>
+                            <span style={{color: "black"}}>To Pay</span>
+                            <span style={{color: "black"}}>$750</span>
                         </div>
                         <div className={styles.cancelContainer}>
                             <span className={styles.cancelStar}>*</span>
@@ -79,6 +80,7 @@ export default function Payment () {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )

@@ -1,3 +1,9 @@
+.netCont {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+}
+
 .networkContainer {
     display: flex;
     flex-direction: column;
@@ -5,6 +11,7 @@
     justify-content: center;
     margin-left: 25%;
     margin-right: 25%;
+    background: #ffffff;
 }
 
 .myNetworkContainer {
@@ -47,6 +54,7 @@
     font-size: 24px;
     font-weight: 600;
     height: 30px;
+    color: black;
 }
 
 .buttonContainer {
@@ -74,6 +82,7 @@
 
 .personWork {
     font-size: 14px;
+    color: black;
 }
 
 .avatarImage {
@@ -93,6 +102,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: black;
 }
 
 .connectContainer {
@@ -150,4 +160,5 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: black;
 }

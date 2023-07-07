@@ -149,7 +149,7 @@ export default function SideBar () {
                         <span className={styles.cardMsgDetail}>premium user profile has more reach in compare with non premium user, which helps them to get hired faster.</span>
                     </div>
                     <div className={styles.premiumButton} onClick={handlePremiumClick}>
-                        <span>Get Premium</span>
+                        <span style={{color: "black"}}>Get Premium</span>
                     </div>
                 </div>
                 <div className={styles.optionContainer}>
