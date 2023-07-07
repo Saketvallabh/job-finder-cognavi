@@ -3,12 +3,12 @@ import Navbar from '../dashboard/components/navbar/page';
 import avatar from 'public/avatar_one.png'
 import avatar_w from 'public/avatarr.png'
 import styles from './styles.module.css';
-import { useState } from 'react';
 
 export default function MyNetworks () {
     return (
         <>
             <Navbar />
+            <div className={styles.netCont}>
             <div className={styles.networkContainer}>
                 <div className={styles.myNetworkContainer}>
                     <div className={styles.requestContainer}>
@@ -23,7 +23,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
@@ -42,7 +42,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
@@ -61,7 +61,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
@@ -114,6 +114,7 @@ export default function MyNetworks () {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )
