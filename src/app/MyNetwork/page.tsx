@@ -22,7 +22,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
@@ -41,7 +41,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
@@ -60,7 +60,7 @@ export default function MyNetworks () {
                                 </div>
                                 <div className={styles.buttonContainer}>
                                     <div className={styles.responseButton}>
-                                        <span>Accept</span>
+                                        <span style={{color: "black"}}>Accept</span>
                                     </div>
                                     <div className={styles.responseButton} style={{background: "rgb(21, 32, 43)"}}>
                                         <span style={{color: "#ffffff"}}>Reject</span>
