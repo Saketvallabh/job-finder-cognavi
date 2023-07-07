@@ -27,6 +27,7 @@
 .cardHeading {
     font-size: 22px;
     font-weight: 400;
+    color: black;
 }
 
 .cardHeadingTwo {
@@ -38,6 +39,7 @@
 .plan {
     font-weight: 600;
     font-size: 32px;
+    color: black;
 }
 
 .planTwo {
@@ -61,6 +63,7 @@
     cursor: pointer;
     /* background:  linear-gradient(to top, #2564e3 0%, #2638bf 100%); */
     background-color: #ffffff;
+    color: black;
 }
 
 .cardTwo {

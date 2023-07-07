@@ -22,9 +22,9 @@ export default function Jobs () {
                     <div className={styles.headingRight}>
                         <div className={styles.recomNumber}><span className={styles.number}>386</span></div>
                         <div className={styles.sortContainer}>
-                            <span>Sort by:</span>
+                            <span style={{color: "black"}}>Sort by:</span>
                             <span>&nbsp;</span>
-                            <span style={{fontSize: "16px", fontWeight: "600", alignItems: "center"}}>Last Updated</span>
+                            <span style={{fontSize: "16px", fontWeight: "600", alignItems: "center", color: "black"}}>Last Updated</span>
                         </div>
                     </div>
                 </div>

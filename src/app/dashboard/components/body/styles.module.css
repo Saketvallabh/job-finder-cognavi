@@ -36,6 +36,7 @@
     align-items: center;
     padding: 2px 15px 2px 15px;
     justify-content: center;
+    color: black;
 }
 
 .number {
@@ -99,6 +100,7 @@
     justify-content: center;
     align-items: center;
     height: 40px;
+    color: black;
 }
 
 .companyDetails {
@@ -111,6 +113,7 @@
 .companyName {
     display: flex;
     font-size: 14px;
+    color: black;
 }
 
 .positionDetail {
@@ -125,6 +128,7 @@
     display: flex;
     width: 60%;
     font-size: 24px;
+    color: black;
 }
 
 .jobFilters {
@@ -149,6 +153,7 @@
     justify-content: center;
     align-items: center;
     width: 40%;
+    color: black;
 }
 
 .payContainer {
@@ -187,10 +192,12 @@
 .pay {
     font-size: 16px;
     font-weight: 600;
+    color: black;
 }
 
 .jobLoc {
     font-size: 12px;
+    color: black;
 }
 
 .companyLogo {

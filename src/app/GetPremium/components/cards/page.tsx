@@ -16,7 +16,7 @@ export default function Cards () {
                     <div className={styles.cardOne}>
                         <div className={styles.cardHeading}>Monthly Plan</div>
                         <span className={styles.plan}>US $300<span className={styles.cardHeading}>/mo</span></span>
-                        <span>Renew every month</span>
+                        <span style={{color: "black"}}>Renew every month</span>
                         <div className={styles.buyBtn} style={{background: "black"}}onClick={handleBuyNowClick}>
                             <span style={{color: "#ffffff"}}>Buy now</span>
                         </div>
