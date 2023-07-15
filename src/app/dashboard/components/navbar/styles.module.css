@@ -1,4 +1,4 @@
-.navContainer{
+/* .navContainer{
     display: flex;
     width: 100%;
     background-color: black;
@@ -52,7 +52,6 @@
     width: 12%;
     justify-content: center;
     gap: 10px;
-    /* border: 1px solid #c5e4ea; */
     border-radius: 20px;
     right: 60px;
     position: absolute;
@@ -77,4 +76,4 @@
     width: 100%;
     justify-content: center;
     height: 2px;
-}
+} */

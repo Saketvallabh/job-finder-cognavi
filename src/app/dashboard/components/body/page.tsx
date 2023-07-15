@@ -5,7 +5,7 @@ import dribble from 'public/dribble_logo.png'
 import appl from 'public/apple_logo.png'
 import { useState } from 'react';
 import JobCard from './jobCard';
-import styles from './styles.module.css'
+// import styles from './styles.module.css'
 
 export default function Jobs () {
     const [jobSaved, setJobSaved] = useState(false);
@@ -16,20 +16,22 @@ export default function Jobs () {
 
     return (
         <>
-            <div className={styles.jobsContainer}>
-                <div className={styles.heading}>
-                    <span className={styles.headingText}>Recommended jobs</span>
-                    <div className={styles.headingRight}>
-                        <div className={styles.recomNumber}><span className={styles.number}>386</span></div>
-                        <div className={styles.sortContainer}>
-                            <span style={{color: "black"}}>Sort by:</span>
+            <div className="flex flex-col w-full pt-8 pr-6 pb-1 pl-5">
+                <div className="flex flex-row w-full h-10 items-center">
+                    <span className="flex text-3xl font-semibold text-black min-w-hrm">Recommended jobs</span>
+                    <div className="flex justify-between w-9/12">
+                        <div className="flex w-20 h-10 items-center justify-center text-black border-2 border-nbb px-1 py-4 rounded-3xl">
+                            <span className="font-semibold">386</span>
+                        </div>
+                        <div className="flex w-2/5">
+                            <span className="text-black">Sort by:</span>
                             <span>&nbsp;</span>
-                            <span style={{fontSize: "16px", fontWeight: "600", alignItems: "center", color: "black"}}>Last Updated</span>
+                            <span className="text-base font-semibold text-black items-center">Last Updated</span>
                         </div>
                     </div>
                 </div>
-                <div className={styles.jobCardContainer}>
-                    <div className={styles.jobsRow}>
+                <div className="flex flex-col w-full mt-5">
+                    <div className="flex flex-row justify-between mb-2 pt-2.5 gap-2.5 w-11/12">
                         <JobCard 
                             company={"Amazon"}
                             logo={amazon}
@@ -58,7 +60,7 @@ export default function Jobs () {
                             level="Senior"
                         />
                     </div>
-                    <div className={styles.jobsRow}>
+                    <div className="flex flex-row justify-between mb-2 pt-2.5 gap-2.5 w-11/12">
                         <JobCard 
                             company={"Dribble"}
                             logo={dribble}
@@ -92,3 +94,14 @@ export default function Jobs () {
         </>
     )
 }
+
+
+//className={styles.jobsContainer}
+//className={styles.heading}
+//className={styles.headingText}
+//className={styles.headingRight}
+//className={styles.recomNumber}
+//className={styles.number}
+//className={styles.sortContainer}
+//className={styles.jobCardContainer}
+//className={styles.jobsRow}

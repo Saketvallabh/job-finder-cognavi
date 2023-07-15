@@ -138,30 +138,30 @@ export default function SideBar () {
 
     return (
         <>
-            <div className={styles.sidebarContainer}>
-                <div className={styles.cardContainer}>
-                    <div className={styles.msgContainer}>
-                        <span className={styles.cardMsg}>
-                            <span style={{fontSize: "32px"}}>Increase</span> <span>&nbsp;</span>  
+            <div className="flex flex-col w-full gap-12 pt-10 pl-5 pr-1 pb-1">
+                <div className="flex flex-col w-full h-80 rounded-3xl py-2.5 px-4 bg-gradient-to-t from-cblack to-cblue">
+                    <div className="flex flex-col h-5/6">
+                        <span className="font-normal text-aliceblue">
+                            <span className="text-3xl font-semibold">Increase</span> <span>&nbsp;</span>  
                             your chances of getting hired by <span>&nbsp;</span> 
-                            <span className={styles.multiText}>3x</span>
+                            <span className="text-3xl font-semibold text-aliceblue">3x</span>
                         </span>
-                        <span className={styles.cardMsgDetail}>premium user profile has more reach in compare with non premium user, which helps them to get hired faster.</span>
+                        <span className="font-normal text-dgray mt-2">premium user profile has more reach in compare with non premium user, which helps them to get hired faster.</span>
                     </div>
-                    <div className={styles.premiumButton} onClick={handlePremiumClick}>
-                        <span style={{color: "black"}}>Get Premium</span>
+                    <div className="flex w-full h-5 bg-acqa items-center justify-center cursor-pointer rounded-3xl min-h-gpbh" onClick={handlePremiumClick}>
+                        <span className="text-black">Get Premium</span>
                     </div>
                 </div>
-                <div className={styles.optionContainer}>
+                <div className="flex flex-col px-2.5 py-2.5 rounded-3xl border-2 border-black">
                 {
                     userOption.map((item) => {
                         return (
                             <>
-                                <div className={styles.optionBox}>
-                                    <div className={styles.imageContainer}><Image src={item.Image} alt={item.alt}/></div>
-                                    <div className={styles.optionText}>{item.description}</div>
+                                <div className="flex flex-row w-full h-12 items-center cursor-pointer gap-4">
+                                    <div className="w-5 h-5"><Image src={item.Image} alt={item.alt}/></div>
+                                    <div className="font-normal text-black">{item.description}</div>
                                 </div>
-                                <div><hr className={styles.horizontalLine}/></div>
+                                <div><hr className="justify-center h-0 w-11/12 text-black"/></div>
                             </>
                         )
                     })
@@ -171,3 +171,15 @@ export default function SideBar () {
         </>
     )
 }
+
+//className={styles.cardContainer}
+//className={styles.msgContainer}
+//className={styles.cardMsg}
+//className={styles.multiText} 
+//className={styles.cardMsgDetail}
+//className={styles.premiumButton}
+//className={styles.optionContainer}
+//className={styles.optionBox}
+//{styles.imageContainer}
+//className={styles.optionText}
+//className={styles.horizontalLine}
