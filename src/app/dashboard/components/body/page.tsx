@@ -22,7 +22,11 @@ export default function Jobs () {
         const searchEngine = 'google_jobs'; 
 
         try {
-            const response = await axios.get('https://serpapi.com/search', {
+            const response = await axios.get('http://serpapi.com/search', {
+            headers: {
+                'Access-Control-Allow-Origin': '*', 
+                'Access-Control-Allow-Methods': 'GET',
+                },
             params: {
                 q: query,
                 api_key: apiKey,

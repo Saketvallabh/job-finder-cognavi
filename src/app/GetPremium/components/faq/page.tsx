@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+// import styles from './styles.module.css'
 
 export default function Faq () {
     const faq = [
@@ -21,16 +21,16 @@ export default function Faq () {
     ]
     return (
         <>
-            <div className={styles.QnAContainer}>
-                <div className={styles.faqHeadingContainer}>
-                    <span className={styles.faqHeading}>FAQs</span>
+            <div className="flex flex-col w-4/5 justify-center min-h-dykc py-5 px-8 bg-gradient-to-t from-abUscone to-abUsctwo">
+                <div className="flex justify-center mt-5 mb-5 w-11/12">
+                    <span className="text-3xl font-semibold text-black">FAQs</span>
                 </div>
                 {faq.map((item) => {
                     return (
                         <>
-                            <div className={styles.questionAnsContainer}>
-                                <span className={styles.question}>{item.Q}</span>
-                                <span className={styles.answer}>{item.A}</span>
+                            <div className="flex flex-col justify-start mb-5 w-11/12">
+                                <span className="text-xl font-semibold text-black">{item.Q}</span>
+                                <span className="text-base font-normal text-faqa">{item.A}</span>
                             </div>
                         </>
                     )
@@ -39,3 +39,10 @@ export default function Faq () {
         </>
     )
 }
+
+//className={styles.QnAContainer}
+//className={styles.faqHeadingContainer}
+//className={styles.faqHeading}
+//className={styles.questionAnsContainer}
+//className={styles.question}
+//className={styles.answer}
