@@ -3,8 +3,9 @@ import amazon from 'public/amazon.png';
 import google from 'public/google.png';
 import dribble from 'public/dribble_logo.png'
 import appl from 'public/apple_logo.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import JobCard from './jobCard';
+import axios from 'axios';
 // import styles from './styles.module.css'
 
 export default function Jobs () {
@@ -13,6 +14,40 @@ export default function Jobs () {
     const handleSaveClick = () => {
         setJobSaved(!jobSaved)
     }
+
+
+
+    async function getSearchResults(query: string): Promise<void> {
+        const apiKey = 'f0748a4fa911dac5b6a4c3d604752911dd69bd70b32f3a0a2cfb8d7506ed31e2';
+        const searchEngine = 'google_jobs'; 
+
+        try {
+            const response = await axios.get('https://serpapi.com/search', {
+            params: {
+                q: query,
+                api_key: apiKey,
+                engine: searchEngine,
+            },
+            });
+
+            // Handle the response data
+            //const searchResults = response.data;
+            console.log("********api", response)
+
+            // Process and display the search results
+            // searchResults.organic_results.forEach((result: any, index: number) => {
+            // console.log(`Result ${index + 1}: ${result.title}`);
+            // console.log(`URL: ${result.url}\n`);
+            // });
+        } catch (error) {
+            console.error('Error fetching search results:', error);
+        }
+    }
+
+    useEffect(() => {
+        getSearchResults("barista new york");
+    }, [])
+
 
     return (
         <>
