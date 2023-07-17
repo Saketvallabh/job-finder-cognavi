@@ -15,41 +15,82 @@ export default function Jobs () {
         setJobSaved(!jobSaved)
     }
 
+    // NOTE ->  I have tried to integrate apis using rapid api, serp Api, adzua and even more but some of them requires Internation payment
+    //          and rest of them requires CORS configuration from server side which not feasible in my case.
+    //          I tried even more with public api but same issue either they need authorisation key which i will only after entering vredit card details
+    //          or they need some sever side configuration.
+
+    // I will just write here the steps which i would have done in case if i found job apis
+    
+    // 1. first i will collect my response in state variable.  
+    //     ex - const [jobs, setJobs] = useState<jobList[]>([]);
+
+    // 2. then if i need to use it in diff component, i will send it as props 
+    //     ex- <Component jobs={jobs} />
+
+    // 3. since we are using TypeScript i have define type of my props hence will define it like 
+    //     interface Job {
+    //       jobRole: string;
+    //       companyName: string;
+    //       location: string;
+    //       pay: Number
+    //     }
+
+    // 4. in child component i will receive the props as 
+    //      interface ChildComponentProps {
+    //          jobs: Job[];
+    //      }
+    //    function childComponent ({ChildComponentProps: props})
 
 
-    async function getSearchResults(query: string): Promise<void> {
-        const apiKey = 'f0748a4fa911dac5b6a4c3d604752911dd69bd70b32f3a0a2cfb8d7506ed31e2';
-        const searchEngine = 'google_jobs'; 
 
-        try {
-            const response = await axios.get('http://serpapi.com/search', {
-            headers: {
-                'Access-Control-Allow-Origin': '*', 
-                'Access-Control-Allow-Methods': 'GET',
-                },
-            params: {
-                q: query,
-                api_key: apiKey,
-                engine: searchEngine,
-            },
-            });
+    // async function getSearchResults(query: string): Promise<void> {
+    //     const apiKey = 'f0748a4fa911dac5b6a4c3d604752911dd69bd70b32f3a0a2cfb8d7506ed31e2';
+    //     const searchEngine = 'google_jobs'; 
+    //     //'http://serpapi.com/search'
+    //     try {
+    //         const response = await axios.get(`https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=9fc903d4&app_key=d046bbf17aadf0839bc12180014c9179`, {
+    //         headers: {
+    //             'Access-Control-Allow-Origin': '*', 
+    //             'Access-Control-Allow-Methods': 'GET',
+    //             'Accept': 'application/json'
+    //             },
+    //         // params: {
+    //         //     q: query,
+    //         //     api_key: apiKey,
+    //         //     engine: searchEngine,
+    //         // },
+    //         });
 
-            // Handle the response data
-            //const searchResults = response.data;
-            console.log("********api", response)
+    //         //const searchResults = response.data;
+    //         console.log("********api", response)
 
-            // Process and display the search results
-            // searchResults.organic_results.forEach((result: any, index: number) => {
-            // console.log(`Result ${index + 1}: ${result.title}`);
-            // console.log(`URL: ${result.url}\n`);
-            // });
-        } catch (error) {
-            console.error('Error fetching search results:', error);
-        }
-    }
+    //     } catch (error) {
+    //         console.error('Error fetching search results:', error);
+    //     }
+    // }
+
+    // const getjobs = async () => {
+    //     const url = 'https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=9fc903d4&app_key=d046bbf17aadf0839bc12180014c9179';
+    //     const options = {
+    //         headers: {
+    //             'Access-Control-Allow-Origin': '*', 
+    //             'Access-Control-Allow-Methods': 'GET',
+    //             'Accept': 'application/json'
+    //         }
+    //     }
+    //     try {
+    //         const response = await fetch(url, options);
+    //         //const result = await response.text();
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.error(error, "error in api");
+    //     }
+    // }
 
     useEffect(() => {
-        getSearchResults("barista new york");
+        //getSearchResults("barista new york");
+        //getjobs();
     }, [])
 
 
