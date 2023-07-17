@@ -58,41 +58,41 @@ export default function Navbar () {
 
     return (
         <>
-            <div className={styles.navContainer}>
-                <div className={styles.listContainer}>
-                    <div className={styles.logoContainer}>
-                        <div className={styles.logoImage}><Image src={logo} alt={"logo"}/></div>
-                        <span className={styles.styText}>Job Finder</span>
+            <div  className="flex w-full bg-black flex-col h-16"> 
+                <div className="flex flex-row w-full h-full items-center pt-2.5 pr-5 pb-2.5 pl-5">
+                    <div className="flex flex-row justify-center gap-2.5 w-1/6">
+                        <div className="h-5 w-6"><Image src={logo} alt={"logo"}/></div>
+                        <span className="font-semibold text-white">Job Finder</span>
                     </div>
-                    <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleDashboardClick} style={{color: tab === "dashboard" ? '#d4f6ed' : '#ffffff'}}>
+                    <div className="flex flex-row justify-center w-1/6">
+                        <div className="font-normal text-white cursor-pointer" onClick={handleDashboardClick} style={{color: tab === "dashboard" ? '#d4f6ed' : '#ffffff'}}>
                             <p>Dashboard</p>
                         </div>
                     </div>
-                    <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleNetworkClick} style={{color: tab === "MyNetworks" ? '#d4f6ed' : '#ffffff'}}>
+                    <div className="flex flex-row justify-center w-1/6">
+                        <div className="font-normal text-white cursor-pointer" onClick={handleNetworkClick} style={{color: tab === "MyNetworks" ? '#d4f6ed' : '#ffffff'}}>
                             <p>My Networks</p>
                         </div>
                     </div>
-                    <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handlePremiumClick} style={{color: tab === "GetPremium" ? '#d4f6ed' : '#ffffff'}}>
+                    <div className="flex flex-row justify-center w-1/6">
+                        <div className="font-normal text-white cursor-pointer" onClick={handlePremiumClick} style={{color: tab === "GetPremium" ? '#d4f6ed' : '#ffffff'}}>
                             <p>Get Premium</p>
                         </div>
                     </div>
-                    <div className={styles.listContent}>
-                        <div className={styles.contentText} onClick={handleAboutClick} style={{color: tab === "AboutUs" ? '#d4f6ed' : '#ffffff'}}>
+                    <div className="flex flex-row justify-center w-1/6">
+                        <div className="font-normal text-white cursor-pointer" onClick={handleAboutClick} style={{color: tab === "AboutUs" ? '#d4f6ed' : '#ffffff'}}>
                             <p>About Us</p>
                         </div>
                     </div>
-                    <div className={styles.avatarContainer} onClick={handleProfileClick}>
-                        <div className={styles.logoImage}><Image src={avatar_w} alt={"logo"}/></div>
-                        <span className={styles.styText}>Saket</span>
+                    <div className="flex flex-row justify-center absolute cursor-pointer right-16 gap-2.5 w-auto" onClick={handleProfileClick}>
+                        <div className="h-5 w-6"><Image src={avatar_w} alt={"logo"}/></div>
+                        <span className="font-semibold text-white">Saket</span>
                         {showProfile && 
-                            <div className={styles.dropDown}>
+                            <div className="absolute flex flex-col bg-gray text-black px-3 py-3 top-8 rounded-md z-10 min-w-max shadow-2xl">
                                 {Profile.map((Item) => 
                                     <>
                                         <span>{Item.Option}</span>
-                                        <hr className={styles.horizontalLine}/>
+                                        <hr className="w-full justify-center h-0 text-lgray"/>
                                     </>
                                 )}
                             </div>
@@ -100,9 +100,21 @@ export default function Navbar () {
                     </div>
                 </div>
                 <div>
-                    <hr style={{width: "100%", color: "red"}}/>
+                    <hr className="w-full text-white"/>
                 </div>
             </div>
         </>
     )
 }
+
+
+//className={styles.navContainer}
+//className={styles.listContainer}
+//className={styles.logoContainer}
+//className={styles.logoImage}
+//className={styles.styText}
+//className={styles.listContent}
+//className={styles.contentText}
+//className={styles.avatarContainer}
+//className={styles.dropDown}
+//className={styles.horizontalLine}

@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import styles from './styles.module.css'
+// import styles from './styles.module.css'
 
 export default function Cards () {
 
@@ -11,22 +11,22 @@ export default function Cards () {
 
     return (
         <>
-            <div className={styles.planCardContainer}>
-                <div className={styles.planCards}>
-                    <div className={styles.cardOne}>
-                        <div className={styles.cardHeading}>Monthly Plan</div>
-                        <span className={styles.plan}>US $300<span className={styles.cardHeading}>/mo</span></span>
-                        <span style={{color: "black"}}>Renew every month</span>
-                        <div className={styles.buyBtn} style={{background: "black"}}onClick={handleBuyNowClick}>
-                            <span style={{color: "#ffffff"}}>Buy now</span>
+            <div className="flex flex-row justify-center mt-20">
+                <div className="flex flex-row w-6/12 justify-between">
+                    <div className="flex flex-col w-2/5 bg-white border-2 border-black rounded-3xl min-h-crc py-5 px-2.5">
+                        <div className="text-xl font-normal text-black">Monthly Plan</div>
+                        <span className="font-semibold text-3xl text-black">US $300<span className="text-xl font-normal text-black">/mo</span></span>
+                        <span className="text-black">Renew every month</span>
+                        <div className="flex w-full justify-center items-center mt-5 cursor-pointer bg-black text-black rounded-xl border-2 border-black" onClick={handleBuyNowClick}>
+                            <span className="text-white">Buy now</span>
                         </div>
                     </div>
-                    <div className={styles.cardTwo}>
-                        <div className={styles.cardHeadingTwo}>Quaterly Plan</div>
-                        <span className={styles.planTwo}>US $250<span className={styles.cardHeadingTwo}>/mo</span></span>
-                        <span className={styles.planMsg}>Renew quaterly for $750</span>
-                        <div className={styles.buyBtn} onClick={handleBuyNowClick}>
-                            Buy now
+                    <div className="flex flex-col w-2/5 bg-black border-2 border-black rounded-3xl min-h-crc py-5 px-2.5">
+                        <div className="text-xl font-normal text-white">Quaterly Plan</div>
+                        <span className="font-semibold text-3xl text-white">US $250<span className="text-xl font-normal text-white">/mo</span></span>
+                        <span className="text-white">Renew quaterly for $750</span>
+                        <div className="flex w-full justify-center items-center mt-5 cursor-pointer bg-white text-black rounded-xl border-2 border-black" onClick={handleBuyNowClick}>
+                            <span className="text-black">Buy now</span>
                         </div>
                     </div>
                 </div>
@@ -34,3 +34,15 @@ export default function Cards () {
         </>
     )
 }
+
+//className={styles.planCardContainer}
+//className={styles.planCards}
+//className={styles.cardOne}
+//className={styles.cardHeading}
+//className={styles.plan}
+//className={styles.buyBtn}
+//className={styles.cardTwo}
+//className={styles.cardHeadingTwo}
+//className={styles.planTwo}
+//className={styles.planMsg}
+//className={styles.buyBtn}
