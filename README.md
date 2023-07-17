@@ -1,3 +1,34 @@
+    // NOTE ->  I have tried to integrate apis using rapid api, serp Api, adzua and even more but some of them requires Internation payment
+    //          and rest of them requires CORS configuration from server side which not feasible in my case.
+    //          I tried even more with public api but same issue either they need authorisation key which i will only after entering credit                 card details
+    //          or they need some sever side configuration.
+
+    // I will just write here the steps which i would have done in case if i found job apis
+    
+    // 1. first i will collect my response in state variable.  
+    //     ex - const [jobs, setJobs] = useState<jobList[]>([]);
+
+    // 2. then if i need to use it in diff component, i will send it as props 
+    //     ex- <Component jobs={jobs} />
+
+    // 3. since we are using TypeScript i have define type of my props hence will define it like 
+    //     interface Job {
+    //       jobRole: string;
+    //       companyName: string;
+    //       location: string;
+    //       pay: Number
+    //     }
+
+    // 4. in child component i will receive the props as 
+    //      interface ChildComponentProps {
+    //          jobs: Job[];
+    //      }
+    //    function childComponent ({ChildComponentProps: props})
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
