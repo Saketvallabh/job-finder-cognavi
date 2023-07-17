@@ -8,7 +8,7 @@ import avatar_one from 'public/avatar_one.png';
 import tie from 'public/tie.png';
 import money_one from 'public/money.png';
 import search_one from 'public/search_one.png';
-import styles from './styles.module.css'
+// import styles from './styles.module.css'
 
 export default function getPremium () {
     const benefits = [
@@ -47,7 +47,7 @@ export default function getPremium () {
     return (
        <div className="flex flex-col w-full h-screen bg-white">
             <Navbar />
-            <div className={styles.pricingBody}>
+            <div className="w-full h-4/6 bg-gradient-to-t from-abUscone to-abUsctwo rounded-br-3xl rounded-bl-3xl">
                 <div className="flex h-24 items-center justify-center">
                     <span className="text-3xl font-semibold text-black">Switch to Premium now!</span>
                 </div>

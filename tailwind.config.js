@@ -45,7 +45,8 @@ module.exports = {
       'resbtwo': 'rgb(21, 32, 43)',
       'mncb': 'rgb(147, 212, 216)',
       'mncrc': 'rgb(21, 32, 43)',
-      'faqa': '#626161'
+      'faqa': '#626161',
+      'ccch': '#d2691e'
     },
     minHeight: {
       'ch': '330px',
@@ -55,7 +56,8 @@ module.exports = {
       'dykc': '200px',
       'gpbh': '28px',
       'crc': '100px',
-      'gpbc': '80px'
+      'gpbc': '80px',
+      'pph': '25px'
     },
     minWidth: {
       'dcw': '45%',
